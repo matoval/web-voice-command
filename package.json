@@ -1,0 +1,18 @@
+{
+  "name": "web-voice-command",
+  "version": "1.0.0",
+  "description": "Making voice command on the web better",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "speech-recognition",
+    "web-speech-API",
+    "web-speech",
+    "voice-command",
+    "voice-control"
+  ],
+  "author": "Matthew Sandoval",
+  "license": "ISC"
+}
