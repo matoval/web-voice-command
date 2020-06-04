@@ -4,7 +4,7 @@ const webVoiceCommand = (function() {
   let listeningToggle = false
 
   //Call browser API for Web Speech
-  window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition
+  window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
   const listening = new SpeechRecognition()
 
   //Options defaults
@@ -85,7 +85,7 @@ const webVoiceCommand = (function() {
           else {
             let filteredTranscript = []
             for (const word of words) {
-              filteredTranscript = [...filteredTranscript, ...transcripts.filter(match => match === word)]
+              filteredTranscript = [...filteredTranscript, ...transcripts.filter(match => match === word.word.name)]
             }
             return callback(filteredTranscript)
           }
