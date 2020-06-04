@@ -2,14 +2,14 @@
 
 ## **Install**
 ```javasript
-npm install web-voice-command
+npm i web-voice-command
 ```
 
 ## **Usage**
-  ## Compatibility:
+## Compatibility:
   Currently only works on chrome. Other browsers do not have support for the Web Speech API as of June 2020.
 
-  ## Options:
+## Options:
   - **Use setOptions to set the options you need.**
   - **persistentListening:** If true listening will be continuous, if false listening will only last four secounds. * *When using the startStop method persistentListening option doesn't come into effect. StartStop method will continuously listen until stoped*
   - **listenOnLoad:** If ture listening will start when the page loads. If persistentListening is false listening will only last four seconds.
@@ -18,7 +18,7 @@ npm install web-voice-command
   - persistentListening: false
   - listenOnLoad: false
   
-  ## Methods:
+## Methods:
   - **setOptions:** Used to set options
   ```javascript
    webVoiceCommand.setOptions({
