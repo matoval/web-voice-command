@@ -1,6 +1,6 @@
 {
   "name": "web-voice-command",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Making voice command on the web better",
   "main": "index.js",
   "scripts": {
