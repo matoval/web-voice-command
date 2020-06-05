@@ -17,15 +17,57 @@ npm i web-voice-command
   *Default options* 
   - persistentListening: false
   - listenOnLoad: false
+  - language: 'en-US'
   
 ## Methods:
   - **setOptions:** Used to set options
   ```javascript
    webVoiceCommand.setOptions({
     persistentListening: true,
-    listenOnLoad: true
+    listenOnLoad: true,
+    language: 'ro-RO' //set language to ro-RO Romanian Romania
   })
   ```
+  *setting language use BCP 47 Language Codes*
+  BCP 47 Language Codes:
+
+ar-SA Arabic Saudi Arabia\
+cs-CZ Czech Czech Republic\
+da-DK Danish Denmark\
+de-DE German Germany\
+el-GR Modern Greek Greece\
+en-AU English Australia\
+en-GB English United Kingdom\
+en-IE English Ireland\
+en-US English United States\
+en-ZA English South Africa\
+es-ES Spanish Spain\
+es-MX Spanish Mexico\
+fi-FI Finnish Finland\
+fr-CA French Canada\
+fr-FR French France\
+he-IL Hebrew Israel\
+hi-IN Hindi India\
+hu-HU Hungarian Hungary\
+id-ID Indonesian Indonesia\
+it-IT Italian Italy\
+ja-JP Japanese Japan\
+ko-KR Korean Republic of Korea\
+nl-BE Dutch Belgium\
+nl-NL Dutch Netherlands\
+no-NO Norwegian Norway\
+pl-PL Polish Poland\
+pt-BR Portuguese Brazil\
+pt-PT Portuguese Portugal\
+ro-RO Romanian Romania\
+ru-RU Russian Russian Federation\
+sk-SK Slovak Slovakia\
+sv-SE Swedish Sweden\
+th-TH Thai Thailand\
+tr-TR Turkish Turkey\
+zh-CN Chinese China\
+zh-HK Chinese Hong Kong\
+zh-TW Chinese Taiwan
   - **results:** Returns all voice inputs in arrays that are separated by pauses in voice inputs.
   ```javascript
    webVoiceCommand.results(function(result){

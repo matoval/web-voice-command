@@ -11,6 +11,7 @@ const webVoiceCommand = (function() {
   let options = {
     persistentListening: false,
     listenOnLoad: false,
+    language: 'en-US'
   }
 
   
@@ -34,6 +35,10 @@ const webVoiceCommand = (function() {
       
       if (options.listenOnLoad) {
         listening.start()
+      }
+
+      if (options.language) {
+        listening.lang = options.language
       }
     },
     //Start and stop listening using one or two buttons
