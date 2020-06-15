@@ -4,7 +4,7 @@
   "description": "Making voice command on the web better",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/matoval/web-voice-command/issues"
   },
-  "homepage": "https://github.com/matoval/web-voice-command"
+  "homepage": "https://github.com/matoval/web-voice-command",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
 }
