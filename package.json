@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/matoval/web-voice-command/issues"
   },
-  "homepage": "https://github.com/matoval/web-voice-command"
+  "homepage": "https://github.com/matoval/web-voice-command",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
 }
