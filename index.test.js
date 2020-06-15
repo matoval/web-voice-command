@@ -1,29 +1,24 @@
 const webVoiceCommand = require('web-voice-command')
 const { Corti } = require('./node_modules/corti/src/corti')
 
-describe('Corti.patch', function() {
+describe('webVoiceCommand and methods defined', function () {
+  it('webVoiceCommand is an object', function () {
+    expect(typeof webVoiceCommand.startStop).toBe('function')
+  })
 
-  it('is Corti an object', function () {
-    expect(typeof Corti).toBe('object');
-  });
+  it('setOptions is a function', function () {
+    expect(typeof webVoiceCommand.setOptions).toBe('function')
+  })
 
-  it('is Corti.patch a function', function () {
-    expect(typeof Corti.patch).toBe('function');
-  });
+  it('results is a function', function () {
+    expect(typeof webVoiceCommand.results).toBe('function')
+  })
 
-  it('is Corti.unpatch a function', function () {
-    expect(typeof Corti.unpatch).toBe('function');
-  });
+  it('startStop is a function', function () {
+    expect(typeof webVoiceCommand.startStop).toBe('function')
+  })
 
-  it('is Corti defined should fail', function () {
-    expect(Corti.patch).toBeDefined();
-  });
-
-  it('should make SpeechRecognition defined', function () {
-    expect(window.SpeechRecognition).toBeUndefined();
-    Corti.patch();
-    expect(window.SpeechRecognition).toBeDefined();
-    Corti.unpatch();
-  });
-
-});
+  it('wordList is a function', function () {
+    expect(typeof webVoiceCommand.wordList).toBe('function')
+  })
+})
