@@ -49,7 +49,7 @@ describe('Mock the SpeechRecognition object', function () {
     expect(webVoiceCommand.results).toBeDefined()
   })
 
-  //still failing
+  //still failing. need to mock the web speech API
   // it('get results', function () {
   //   let expectedResult
   //   webVoiceCommand.results((result) => {
