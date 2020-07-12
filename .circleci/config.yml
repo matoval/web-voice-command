@@ -30,8 +30,8 @@ workflows:
       jobs:
         - build-and-test
         - publish:
+            requires:
+              - build-and-test
             filters:
               tags:
-                only: /^v.*/
-              branches:
-                ignore: /.*/
+                only: /^0-9/
