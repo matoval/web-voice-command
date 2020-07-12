@@ -4,7 +4,8 @@
   "description": "Making voice command on the web better",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "format": "prettier --write \"*.js\""
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,22 @@
   "bugs": {
     "url": "https://github.com/matoval/web-voice-command/issues"
   },
-  "homepage": "https://github.com/matoval/web-voice-command"
+  "homepage": "https://github.com/matoval/web-voice-command",
+  "devDependencies": {
+    "corti": "^0.2.0",
+    "eslint": "^7.2.0",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.10",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm run test"
+    }
+  },
+  "lint-staged": {
+    "*.js": "prettier --write"
+  }
 }
