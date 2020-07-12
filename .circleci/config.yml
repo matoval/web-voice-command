@@ -11,7 +11,21 @@ jobs:
           steps:
             - run: npm install
             - run: npm test
+  publish:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: 
+                name: Publish to NPM
+                command: 
+                  npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+                  npm publish 
+
 workflows:
     build-and-test:
       jobs:
         - build-and-test
+        - publish
