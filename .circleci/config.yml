@@ -30,3 +30,6 @@ workflows:
       jobs:
         - build-and-test
         - publish
+            filters:
+              tags:
+                only: /^v.*/
