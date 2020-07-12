@@ -29,7 +29,7 @@ workflows:
     build-and-test:
       jobs:
         - build-and-test
-        - publish
+        - publish:
             filters:
               tags:
                 only: /^v.*/
