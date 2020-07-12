@@ -1,4 +1,5 @@
 const webVoiceCommand = require('web-voice-command')
+const { results } = require('.')
 
 describe('webVoiceCommand and methods defined', function () {
   it('wordList is a function', function () {
@@ -23,28 +24,37 @@ describe('webVoiceCommand and methods defined', function () {
 })
 
 describe('Mock the SpeechRecognition object', function () {
-  // SpeechRecognition = jest.fn()
-  const mockSpeech = {
-    results() {
-      return (event = {
-        results: [{ transcript: 'test test test' }],
+  beforeAll(() => {
+    window.SpeechRecognition = jest.fn()
+    window.SpeechRecognition.onresult = jest
+      .fn()
+      .mockImplementation((callback) => {
+        callback({
+          results: [{ transcript: ['test test'] }],
+        })
+        window.SpeechRecognition.options = jest.fn()
+        window.SpeechRecognition.startStop = jest.fn()
       })
-    },
-  }
-  beforeEach(() => {
-    const listening = jest.spyOn(mockSpeech, 'window.SpeechRecognition')
   })
 
-  // it('SpeechRecognition is defined', function () {
-  //   expect(window.SpeechRecognition).toBeDefined()
-  // })
+  it('SpeechRecognition is defined', function () {
+    expect(window.SpeechRecognition).toBeDefined()
+  })
 
-  // it('setOptions calls start function', function () {
-  //   expect(webVoiceCommand.setOptions).toBeDefined()
-  // })
+  it('setOptions calls start function', function () {
+    expect(webVoiceCommand.setOptions).toBeDefined()
+  })
 
-  // it('setOptions calls SpeechRecognition function', function () {
-  //   webVoiceCommand.results()
-  //   expect(window.SpeechRecognition).toHaveBeenCalled()
+  it('results calls start function', function () {
+    expect(webVoiceCommand.results).toBeDefined()
+  })
+
+  //still failing
+  // it('get results', function () {
+  //   let expectedResult
+  //   webVoiceCommand.results((result) => {
+  //     expectedResult = result
+  //   })
+  //   expect(expectedResult).toEqual('test test')
   // })
 })
