@@ -19,10 +19,11 @@ jobs:
       - node/with-cache:
           steps:
             - run: 
+                name: Authenticate
+                command: npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+            - run:
                 name: Publish to NPM
-                command: 
-                  npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
-                  npm publish
+                command: npm publish
 
 workflows:
     build-and-test:
