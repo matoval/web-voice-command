@@ -45,7 +45,7 @@ function results(callback) {
 function startStop(numberOfButtons, button) {
   if (numberOfButtons === 1) {
     listeningToggle = !listeningToggle
-    if (listeningOn) {
+    if (listeningToggle) {
       listening.start()
       listening.addEventListener('end', listening.start)
     } else {
