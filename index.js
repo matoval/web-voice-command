@@ -34,6 +34,7 @@ function setOptions(newOptions) {
 
 //Get all voice inputs
 function results(callback) {
+  console.log(listening)
   listening.onresult = function (e) {
     const results = e.results[0]
     const transcripts = results[0].transcript.split(' ')
